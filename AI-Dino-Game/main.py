@@ -22,6 +22,7 @@ def game():
     obstacles = [Obstacle(screen)]
 
     clock = pygame.time.Clock()
+
     while 1:
         clock.tick(240)
         level.frame()
@@ -82,7 +83,7 @@ def menu():
                     current_gen = 0
 
 
-def eval_genomes(genomes : neat.DefaultGenome, config):
+def eval_genomes(genomes: neat.DefaultGenome, config):
     nets: list[neat.nn.FeedForwardNetwork] = []
     dinos: list[Player] = []
     ge: list[neat.DefaultGenome] = []
